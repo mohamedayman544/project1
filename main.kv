@@ -1,0 +1,99 @@
+<MyByutton@Button>:
+    font_size:32
+    bold: True
+    
+<Calculator>:
+    BoxLayout:
+        size: root.size
+        orientation: 'vertical'
+
+        TextInput:
+            id:input
+            multiline: False
+            size_hint:(1,.2)
+            text: '0'
+            halign: 'right'
+            font_size:100
+            bold: True
+
+        GridLayout:
+            cols: 4
+
+            MyByutton:
+                text: '%'
+                on_press: root.operator('%')
+            MyByutton:
+                text: '<<'
+                on_press: root.del_last()
+            MyByutton:
+                text: 'C'
+                on_press:root.clear() 
+            MyByutton:
+                text: '/'
+                on_press: root.operator('/')
+
+            MyByutton:
+                text: '7'
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.numbers('7')
+            MyByutton:
+                text: '8'
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.numbers('8')
+            MyByutton:
+                text: '9'
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.numbers('9')
+            MyByutton:
+                text: 'X'
+                on_press: root.operator('*')
+
+            MyByutton:
+                text: '4'
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.numbers('4')
+            MyByutton:
+                text: '5'
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.numbers('5')
+            MyByutton:
+                text: '6'
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.numbers('6')
+            MyByutton:
+                text: '-'
+                on_press: root.operator('-')
+
+            MyByutton:
+                text: '1'
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.numbers('1')
+            MyByutton:
+                text: '2'
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.numbers('2')
+            MyByutton:
+                text: '3'
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.numbers('3')
+            MyByutton:
+                text: '+'
+                on_press: root.operator('+')
+          
+
+            MyByutton:
+                text: '+/-'
+                background_color: (157/255,157/255,157/255,1)
+            MyByutton:
+                text: '0'
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.numbers('0')
+            MyByutton:
+                text: '.'
+                background_color: (157/255,157/255,157/255,1)
+                on_press: root.numbers('.')
+            MyByutton:
+                text: '='
+                #background_normal: ''
+                background_color: 'skyblue'
+                on_press: root.equal()
